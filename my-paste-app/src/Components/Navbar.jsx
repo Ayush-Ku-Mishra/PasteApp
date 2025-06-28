@@ -28,11 +28,11 @@ const Navbar = () => {
 
   {/* 👤 Profile image */}
   <img
-    src={MyPhoto}
-    alt="Profile"
-    className="w-12 h-12 rounded-full object-cover absolute right-4 top-1/2 -translate-y-1/2 border border-blue-500 shadow"
-    title="Your Photo"
-  />
+  src={MyPhoto}
+  alt="Profile"
+  title="Your Photo"
+  className="w-12 h-12 rounded-full object-cover absolute right-4 top-1/2 -translate-y-1/2 border border-blue-500 shadow transition-transform duration-300 ease-in-out hover:scale-125 hover:shadow-[0_0_20px_4px_rgba(59,130,246,0.6)]"
+/>
 </div>
 
   )
