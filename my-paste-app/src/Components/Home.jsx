@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useSearchParams } from 'react-router-dom';
 import { addToPastes, updateToPastes } from '../redux/pasteSlice';
-import { Copy, Sparkles, Globe, Volume2 } from 'lucide-react';
+import { Copy, Sparkles, Globe,} from 'lucide-react';
 import toast from 'react-hot-toast';
 
 const Home = () => {
