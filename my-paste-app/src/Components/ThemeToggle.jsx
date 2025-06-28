@@ -1,9 +1,8 @@
-import React from 'react'
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Sun, Moon } from "lucide-react";
 
 const ThemeToggle = () => {
-    const [darkMode, setDarkMode] = useState(() => {
+  const [darkMode, setDarkMode] = useState(() => {
     return localStorage.getItem("theme") === "dark";
   });
 
@@ -23,10 +22,13 @@ const ThemeToggle = () => {
       className="p-2 text-xl rounded-md border shadow-md hover:bg-gray-100 dark:hover:bg-gray-800 transition"
       title="Toggle Theme"
     >
-      {darkMode ? <Sun className="text-yellow-400" /> : <Moon className="text-blue-700" />}
+      {darkMode ? (
+        <Sun className="text-yellow-400" />
+      ) : (
+        <Moon className="text-blue-700" />
+      )}
     </button>
-  )
-}
+  );
+};
 
-export default ThemeToggle
-
+export default ThemeToggle;
