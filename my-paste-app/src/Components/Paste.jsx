@@ -4,6 +4,8 @@ import { removeFromPastes } from '../redux/pasteSlice';
 import toast from 'react-hot-toast';
 import { Trash2, Copy, Share2, Eye, Pencil, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { CalendarDays } from 'lucide-react';
+
 
 const Paste = () => {
   const pastes = useSelector((state) => state.paste.pastes);
@@ -107,20 +109,7 @@ const Paste = () => {
                 {paste.content}
               </div>
               <div className="flex items-center justify-end gap-2 text-gray-600 dark:text-gray-400 mt-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-5 h-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                  />
-                </svg>
+                <CalendarDays size={19} className="text-gray-600 dark:text-gray-400" />
                 <span>
                   {new Date(paste.createDate).toLocaleDateString(undefined, {
                     year: 'numeric',
